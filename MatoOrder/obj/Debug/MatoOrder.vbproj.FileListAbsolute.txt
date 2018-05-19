@@ -1,1 +1,16 @@
 E:\AKADEMIK\KULIAH\Semester 4\Prak Visual\MatoOrder\MatoOrder\bin\Debug\MatoOrder.exe.config
+E:\AKADEMIK\KULIAH\Semester 4\Prak Visual\MatoOrder\MatoOrder\bin\Debug\MatoOrder.exe
+E:\AKADEMIK\KULIAH\Semester 4\Prak Visual\MatoOrder\MatoOrder\bin\Debug\MatoOrder.pdb
+E:\AKADEMIK\KULIAH\Semester 4\Prak Visual\MatoOrder\MatoOrder\bin\Debug\MatoOrder.xml
+E:\AKADEMIK\KULIAH\Semester 4\Prak Visual\MatoOrder\MatoOrder\bin\Debug\MySql.Data.dll
+E:\AKADEMIK\KULIAH\Semester 4\Prak Visual\MatoOrder\MatoOrder\bin\Debug\Google.Protobuf.dll
+E:\AKADEMIK\KULIAH\Semester 4\Prak Visual\MatoOrder\MatoOrder\bin\Debug\MySql.Data.xml
+E:\AKADEMIK\KULIAH\Semester 4\Prak Visual\MatoOrder\MatoOrder\obj\Debug\MatoOrder.vbprojResolveAssemblyReference.cache
+E:\AKADEMIK\KULIAH\Semester 4\Prak Visual\MatoOrder\MatoOrder\obj\Debug\MatoOrder.Resources.resources
+E:\AKADEMIK\KULIAH\Semester 4\Prak Visual\MatoOrder\MatoOrder\obj\Debug\MatoOrder.vbproj.GenerateResource.Cache
+E:\AKADEMIK\KULIAH\Semester 4\Prak Visual\MatoOrder\MatoOrder\obj\Debug\MatoOrder.exe
+E:\AKADEMIK\KULIAH\Semester 4\Prak Visual\MatoOrder\MatoOrder\obj\Debug\MatoOrder.xml
+E:\AKADEMIK\KULIAH\Semester 4\Prak Visual\MatoOrder\MatoOrder\obj\Debug\MatoOrder.pdb
+E:\AKADEMIK\KULIAH\Semester 4\Prak Visual\MatoOrder\MatoOrder\obj\Debug\MatoOrder.FormSplash.resources
+E:\AKADEMIK\KULIAH\Semester 4\Prak Visual\MatoOrder\MatoOrder\obj\Debug\MatoOrder.FormCashier.resources
+E:\AKADEMIK\KULIAH\Semester 4\Prak Visual\MatoOrder\MatoOrder\obj\Debug\MatoOrder.FormPay.resources
