@@ -26,9 +26,9 @@ Partial Class FormPay
         Me.PayReturn = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.PayAmount = New System.Windows.Forms.TextBox()
+        Me.PayButton = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.TotalPrice = New System.Windows.Forms.Label()
-        Me.PayButton = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.CloseButton = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -78,6 +78,21 @@ Partial Class FormPay
         Me.PayAmount.Size = New System.Drawing.Size(205, 31)
         Me.PayAmount.TabIndex = 0
         '
+        'PayButton
+        '
+        Me.PayButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PayButton.AutoSize = True
+        Me.PayButton.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.PayButton.FlatAppearance.BorderSize = 0
+        Me.PayButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PayButton.ForeColor = System.Drawing.Color.White
+        Me.PayButton.Location = New System.Drawing.Point(7, 56)
+        Me.PayButton.Name = "PayButton"
+        Me.PayButton.Size = New System.Drawing.Size(205, 23)
+        Me.PayButton.TabIndex = 1
+        Me.PayButton.Text = "Proses"
+        Me.PayButton.UseVisualStyleBackColor = False
+        '
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.TotalPrice)
@@ -94,24 +109,9 @@ Partial Class FormPay
         Me.TotalPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TotalPrice.Location = New System.Drawing.Point(3, 22)
         Me.TotalPrice.Name = "TotalPrice"
-        Me.TotalPrice.Size = New System.Drawing.Size(72, 25)
+        Me.TotalPrice.Size = New System.Drawing.Size(24, 25)
         Me.TotalPrice.TabIndex = 0
-        Me.TotalPrice.Text = "10000"
-        '
-        'PayButton
-        '
-        Me.PayButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PayButton.AutoSize = True
-        Me.PayButton.BackColor = System.Drawing.Color.MediumSeaGreen
-        Me.PayButton.FlatAppearance.BorderSize = 0
-        Me.PayButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PayButton.ForeColor = System.Drawing.Color.White
-        Me.PayButton.Location = New System.Drawing.Point(7, 56)
-        Me.PayButton.Name = "PayButton"
-        Me.PayButton.Size = New System.Drawing.Size(205, 23)
-        Me.PayButton.TabIndex = 1
-        Me.PayButton.Text = "Bayar"
-        Me.PayButton.UseVisualStyleBackColor = False
+        Me.TotalPrice.Text = "0"
         '
         'Panel1
         '

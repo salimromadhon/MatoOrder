@@ -25,7 +25,6 @@ Partial Class FormCashier
         Me.CloseButton = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ListView1 = New System.Windows.Forms.ListView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.AddMenuButton = New System.Windows.Forms.Button()
         Me.NumMenu = New System.Windows.Forms.NumericUpDown()
@@ -39,8 +38,14 @@ Partial Class FormCashier
         Me.TotalPrice = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.OrderList = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumMenu, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -88,18 +93,6 @@ Partial Class FormCashier
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(699, 47)
         Me.Panel1.TabIndex = 7
-        '
-        'ListView1
-        '
-        Me.ListView1.BackColor = System.Drawing.Color.White
-        Me.ListView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.ListView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListView1.Location = New System.Drawing.Point(0, 0)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(315, 219)
-        Me.ListView1.TabIndex = 0
-        Me.ListView1.TabStop = False
-        Me.ListView1.UseCompatibleStateImageBehavior = False
         '
         'GroupBox1
         '
@@ -173,6 +166,7 @@ Partial Class FormCashier
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.CheckBox1)
         Me.GroupBox3.Controls.Add(Me.OrderNumber)
         Me.GroupBox3.Location = New System.Drawing.Point(12, 58)
         Me.GroupBox3.Name = "GroupBox3"
@@ -199,11 +193,11 @@ Partial Class FormCashier
         Me.ProcessButton.FlatAppearance.BorderSize = 0
         Me.ProcessButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ProcessButton.ForeColor = System.Drawing.Color.White
-        Me.ProcessButton.Location = New System.Drawing.Point(364, 314)
+        Me.ProcessButton.Location = New System.Drawing.Point(364, 313)
         Me.ProcessButton.Name = "ProcessButton"
         Me.ProcessButton.Size = New System.Drawing.Size(323, 23)
         Me.ProcessButton.TabIndex = 4
-        Me.ProcessButton.Text = "Proses"
+        Me.ProcessButton.Text = "Bayar"
         Me.ProcessButton.UseVisualStyleBackColor = False
         '
         'GroupBox4
@@ -222,9 +216,9 @@ Partial Class FormCashier
         Me.TotalPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TotalPrice.Location = New System.Drawing.Point(3, 22)
         Me.TotalPrice.Name = "TotalPrice"
-        Me.TotalPrice.Size = New System.Drawing.Size(72, 25)
+        Me.TotalPrice.Size = New System.Drawing.Size(24, 25)
         Me.TotalPrice.TabIndex = 0
-        Me.TotalPrice.Text = "12000"
+        Me.TotalPrice.Text = "0"
         '
         'TabControl1
         '
@@ -235,21 +229,54 @@ Partial Class FormCashier
         Me.TabControl1.Multiline = True
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(323, 250)
+        Me.TabControl1.Size = New System.Drawing.Size(323, 249)
         Me.TabControl1.TabIndex = 0
         Me.TabControl1.TabStop = False
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.ListView1)
+        Me.TabPage1.Controls.Add(Me.OrderList)
         Me.TabPage1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPage1.Location = New System.Drawing.Point(4, 27)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(315, 219)
+        Me.TabPage1.Size = New System.Drawing.Size(315, 218)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Menu Pesanan"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'OrderList
+        '
+        Me.OrderList.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.OrderList.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
+        Me.OrderList.FullRowSelect = True
+        Me.OrderList.GridLines = True
+        Me.OrderList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None
+        Me.OrderList.Location = New System.Drawing.Point(0, 0)
+        Me.OrderList.Name = "OrderList"
+        Me.OrderList.Size = New System.Drawing.Size(315, 218)
+        Me.OrderList.TabIndex = 0
+        Me.OrderList.TabStop = False
+        Me.OrderList.UseCompatibleStateImageBehavior = False
+        Me.OrderList.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "No."
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Menu........................."
+        Me.ColumnHeader2.Width = 142
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Byk."
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Harga....."
+        Me.ColumnHeader4.Width = 103
         '
         'TabPage2
         '
@@ -257,7 +284,7 @@ Partial Class FormCashier
         Me.TabPage2.Location = New System.Drawing.Point(4, 27)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(315, 219)
+        Me.TabPage2.Size = New System.Drawing.Size(315, 218)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Catatan"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -268,15 +295,30 @@ Partial Class FormCashier
         Me.TextBox1.Location = New System.Drawing.Point(0, 0)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(315, 223)
+        Me.TextBox1.Size = New System.Drawing.Size(315, 235)
         Me.TextBox1.TabIndex = 0
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CheckBox1.ForeColor = System.Drawing.Color.SteelBlue
+        Me.CheckBox1.Location = New System.Drawing.Point(268, 24)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(71, 17)
+        Me.CheckBox1.TabIndex = 0
+        Me.CheckBox1.TabStop = False
+        Me.CheckBox1.Text = "Bungkus?"
+        Me.CheckBox1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'FormCashier
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Lavender
-        Me.ClientSize = New System.Drawing.Size(699, 350)
+        Me.ClientSize = New System.Drawing.Size(699, 348)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.ProcessButton)
@@ -310,7 +352,6 @@ Partial Class FormCashier
     Friend WithEvents CloseButton As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents ListView1 As ListView
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents CustomerName As TextBox
@@ -326,4 +367,11 @@ Partial Class FormCashier
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents OrderList As ListView
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents CheckBox1 As CheckBox
 End Class
