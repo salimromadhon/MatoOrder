@@ -8,7 +8,7 @@
         PayAmount.Focus()
     End Sub
 
-    Private Sub PayAmount_TextChanged(sender As Object, e As EventArgs) Handles PayAmount.TextChanged
+    Private Sub ChangePayReturn(sender As Object, e As EventArgs) Handles PayAmount.TextChanged, TotalPrice.TextChanged
         Try
             PayReturn.Text = Convert.ToInt32(PayAmount.Text) - Convert.ToInt32(TotalPrice.Text)
         Catch ex As Exception

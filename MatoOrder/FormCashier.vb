@@ -86,4 +86,5 @@
         OrderData.RemoveAt(Index)
         RefreshOrderList()
     End Sub
+
 End Class
